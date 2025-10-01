@@ -24,8 +24,10 @@ const Navbar = () => {
         <img src={search_icon} alt="search-icon" className='icons'/>
         <p>Children</p>
         <img src={bell_icon} alt="bell-icon" className='icons' />
-        <img src={profile} alt="profile" className='profile' />
-        <img src={caret_icon} alt="" />
+        <div className="navbar-profile">
+          <img src={profile} alt="profile" className='profile' />
+          <img src={caret_icon} alt="" />
+        </div>
       </div>
     </div>
   )
