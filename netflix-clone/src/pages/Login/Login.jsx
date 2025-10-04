@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import './Login.css'
 import logo from '../../assets/logo.png'
 import { login, signup } from '../../firebase'
+import netflix_spinner from '../../assets/netflix_spinner.gif'
 
 const Login = () => {
   const location = useLocation()
@@ -10,6 +11,7 @@ const Login = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [loading,setLoading] = useState(false);
 
   useEffect(() => {
     setName("")
@@ -18,12 +20,14 @@ const Login = () => {
   }, [location.pathname])
 
   const user_auth = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
+    setLoading(true);
     if(signInState === "Sign In"){
       await login(email,password)
     } else {
       await signup(name,email,password)
     }
+    setLoading(false);
   }
 
   const switchForm = (state) => {
@@ -34,6 +38,10 @@ const Login = () => {
   }
 
   return (
+    loading ? <div className="login_spinner">
+      <img src={netflix_spinner} alt="" />
+    </div>
+    :
     <div className='login'>
       <img src={logo} alt="Netflix Logo" />
       <div className="login-form">
