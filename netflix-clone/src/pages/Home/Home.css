@@ -109,7 +109,7 @@
   
   .hero-caption {
     position: absolute;
-    top: 60px; /* Added space from bottom */
+    top: 150px; /* Added space from bottom */
     padding-left: 5%;
     padding-right: 5%;
     text-align: center;
@@ -164,7 +164,7 @@
   }
   
   .hero-caption {
-    top: 50px; /* More space on mobile */
+    top: 150px; /* More space on mobile */
     padding-left: 4%;
     padding-right: 4%;
   }
@@ -217,7 +217,7 @@
   }
   
   .hero-caption {
-    top: 40px; /* Perfect spacing for small mobile */
+    top: 150px; /* Perfect spacing for small mobile */
     padding-left: 3%;
     padding-right: 3%;
   }
