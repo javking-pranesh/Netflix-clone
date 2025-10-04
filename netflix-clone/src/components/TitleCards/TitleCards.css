@@ -32,3 +32,117 @@
 .more-cards{
     padding-left: 6%;
 }
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .titlecards {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+  
+  .titlecards h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .card-list {
+    gap: 8px;
+  }
+  
+  .card-list img {
+    width: 200px;
+  }
+  
+  .card-list .card p {
+    bottom: 8px;
+    right: 8px;
+    font-size: 14px;
+  }
+  
+  .more-cards {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* ===== MOBILE (481px - 767px) ===== */
+@media (max-width: 768px) {
+  .titlecards {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .titlecards h2 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  
+  .card-list {
+    gap: 6px;
+  }
+  
+  .card-list img {
+    width: 160px;
+  }
+  
+  .card-list .card p {
+    bottom: 6px;
+    right: 6px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .more-cards {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+/* ===== SMALL MOBILE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  .titlecards {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .titlecards h2 {
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+  
+  .card-list {
+    gap: 4px;
+  }
+  
+  .card-list img {
+    width: 130px;
+  }
+  
+  .card-list .card p {
+    bottom: 4px;
+    right: 4px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  
+  .more-cards {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+/* ===== HORIZONTAL SCROLLING OPTIMIZATION FOR TOUCH ===== */
+@media (max-width: 768px) {
+  .card-list {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+ 
+  
+  /* Add some visual indication that it's scrollable */
+  .card-list::after {
+    content: '';
+    padding-right: 10px;
+  }
+}
