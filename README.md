@@ -1,17 +1,16 @@
-Netflix Clone React App 🎬
+# React + Vite
 
-A Netflix-inspired video streaming web application built with ReactJS, allowing users to explore popular movies, top-rated content, upcoming releases, and personalized recommendations. This project is a front-end demonstration of Netflix’s UI/UX with functional movie cards powered by TMDb API.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Features ✨
+Currently, two official plugins are available:
 
-Responsive Hero Section: Eye-catching banner with title, description, and play/more info buttons.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Dynamic Movie Cards: Multiple sections (Popular, Top Rated, Upcoming, Now Playing) fetch data from TMDb API.
+## React Compiler
 
-Horizontal Scrollable Cards: Smooth scrolling for movie cards using mouse wheel or touch drag.
+The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Responsive Design: Mobile-first design, hero section and cards adapt to tablets and phones.
+## Expanding the ESLint configuration
 
-Routing with React Router: Navigate to a player page for individual movie details (setup ready for future integration).
-
-Reusable Components: Navbar, Footer, TitleCards, and Hero section modularized.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

@@ -1,0 +1,266 @@
+.home {
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  mask-image: linear-gradient(to right, transparent, black 75%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-caption {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  padding-bottom: 60px;
+  color: white;
+  z-index: 2;
+}
+
+.caption-img {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero-caption p {
+  font-size: 16px;
+  max-width: 600px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-btns img {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-btns .btn {
+  border: 0;
+  outline: 0;
+  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 44px; /* Better touch targets */
+}
+
+.hero-btns .btn.dark-btn {
+  background: #6d6d6eb3;
+  color: #fff;
+}
+
+.hero-btns .btn:hover {
+  background: #ffffffbf;
+  transform: translateY(-2px);
+}
+
+.hero-btns .btn.dark-btn:hover {
+  background: #6d6d6e66;
+  transform: translateY(-2px);
+}
+
+.more-cards {
+  padding: 0 5%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* ===== TABLET (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+  
+  .banner-img {
+    height: 80vh;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, transparent 10%, black 90%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 90%);
+  }
+  
+  .hero-caption {
+    position: absolute;
+    top: 150px; /* Added space from bottom */
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  
+  .caption-img {
+    width: 70%;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .hero-caption p {
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px auto;
+    line-height: 1.4;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 12px;
+  }
+  
+  .hero-btns .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .hero-btns img {
+    width: 20px;
+  }
+  
+  .more-cards {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+  }
+}
+
+/* ===== MOBILE (481px - 767px) ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+  
+  .banner-img {
+    height: 70vh;
+    mask-image: linear-gradient(to bottom, transparent 5%, black 95%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 95%);
+  }
+  
+  .hero-caption {
+    top: 150px; /* More space on mobile */
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  
+  .caption-img {
+    width: 60%;
+    max-width: 280px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-caption p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .hero-btns {
+    margin-bottom: 25px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-btns .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+    min-height: 42px;
+  }
+  
+  .hero-btns img {
+    width: 18px;
+  }
+  
+  .more-cards {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 15px;
+  }
+}
+
+/* ===== SMALL MOBILE (320px - 480px) ===== */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
+  
+  .banner-img {
+    height: 60vh;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  }
+  
+  .hero-caption {
+    top: 150px; /* Perfect spacing for small mobile */
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  .caption-img {
+    width: 50%;
+    max-width: 220px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-caption p {
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+  
+  .hero-btns {
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .hero-btns .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    min-height: 44px;
+    width: 180px;
+    justify-content: center;
+  }
+  
+  .hero-btns img {
+    width: 16px;
+  }
+  
+  .more-cards {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 10px;
+  }
+  
+  /* Hide the TitleCards in hero section on mobile for better spacing */
+  .hero-caption .titlecards {
+    display: none;
+  }
+}
