@@ -11,20 +11,23 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  const unsubscribe = onAuthStateChanged(auth, (user) => {
-    if (user) {
-      if (window.location.pathname === '/login') {
-        navigate('/');
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      const currentPath = window.location.pathname;
+      const normalizedPath = currentPath.replace('/Netflix-clone', '') || '/';
+      
+      if (user) {
+        if (normalizedPath === '/login') {
+          navigate('/');
+        }
+      } else {
+        if (normalizedPath !== '/login') {
+          navigate('/login');
+        }
       }
-    } else {
-      if (window.location.pathname !== '/login') {
-        navigate('/login');
-      }
-    }
-  });
+    });
 
-  return () => unsubscribe();
-}, [navigate]);
+    return () => unsubscribe();
+  }, [navigate]);
 
   return (
     <div>

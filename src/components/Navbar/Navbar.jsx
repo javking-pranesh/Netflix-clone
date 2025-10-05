@@ -9,17 +9,18 @@ import { logout } from '../../firebase'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-
   const navRef = useRef();
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 80) {
-        navRef.current.classList.add("nav-dark");
-      } else {
-        navRef.current.classList.remove("nav-dark");
+      if (navRef.current) {
+        if (window.scrollY >= 80) {
+          navRef.current.classList.add("nav-dark");
+        } else {
+          navRef.current.classList.remove("nav-dark");
+        }
       }
     };
 
@@ -30,7 +31,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate('/login'); // redirect after logout
+      navigate('/login');
     } catch (err) {
       console.error("Logout failed:", err);
       alert(err.message);

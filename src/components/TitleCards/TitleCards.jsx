@@ -11,8 +11,7 @@ const TitleCards = ({ title, category }) => {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzhlNGIzOWM3MzNkY2FjYjVjNDY5NDU4ZWVhNWRhNCIsIm5iZiI6MTc1OTQxNzU1Mi44NjcsInN1YiI6IjY4ZGU5NGQwNWY2Y2M3ODUyZTZhNzliZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.u_WvJGfdKifUJzwSdBYQZFJZacYz2EhWoQG9i3YJC4M'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzhlNGIzOWM3MzNkY2FjYjVjNDY5NDU4ZWVhNWRhNCIsIm5iZiI6MTc1OTQxNzU1Mi44NjcsInN1YiI6IjY4ZGU5NGQwNWY2Y2M3ODUyZTZhNzliZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.u_WvJGfdKifUJzwSdBYQZFJZacYz2EhWoQG9i3YJC4M'
     }
   };
 
@@ -29,8 +28,9 @@ const TitleCards = ({ title, category }) => {
   }, [category]);
 
   const handleWheel = (event) => {
-    
-    cardsRef.current.scrollLeft += event.deltaY;
+    if (cardsRef.current) {
+      cardsRef.current.scrollLeft += event.deltaY;
+    }
   };
 
   return (
