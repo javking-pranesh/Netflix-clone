@@ -12,15 +12,14 @@ const App = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      const currentPath = window.location.pathname;
-      const normalizedPath = currentPath.replace('/Netflix-clone', '') || '/';
+      const currentPath = window.location.pathname; // CHANGED: Use direct path
       
       if (user) {
-        if (normalizedPath === '/login') {
+        if (currentPath === '/login') {
           navigate('/');
         }
       } else {
-        if (normalizedPath !== '/login') {
+        if (currentPath !== '/login') {
           navigate('/login');
         }
       }
